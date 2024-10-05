@@ -1,0 +1,23 @@
+---
+import { type Projects, LANGUAGES, TECHNOLOGIES  } from "@/types/projects"
+import Project from "./Project.astro"
+
+
+const projects: Projects[] = [
+    {
+        name: "UHCHealhDark",
+        description: "This is a project with various technologies for a minecraft server for modality UHC ",
+        image: "https://pbs.twimg.com/profile_images/1804530783807246336/RmuVmBJw_400x400.jpg",
+        repository: "https://github.com/UHCHealthDark/uhc-plugin",
+        languages: [LANGUAGES.JAVA],
+        technologies: []
+    }
+]
+---
+
+<div id="projects">
+    <h2 class="text-2xl pl-32 text-white font-bold">Projects</h2>
+    <div>
+        {projects.map((project) => <Project {...project} />)}
+    </div>
+</div>

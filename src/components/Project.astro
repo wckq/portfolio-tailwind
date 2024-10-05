@@ -1,0 +1,25 @@
+---
+import Github from "./icons/Github.astro"
+import type { Projects } from "@/types/projects"
+
+interface Props extends Projects {}
+
+const { name, description, image, repository, technologies, languages }: Projects = Astro.props
+---
+
+<div class="flex items-center bg-dark-gray-700 my-4 mx-32 p-6 rounded-2xl space-x-10">
+    <div>
+        <img class="rounded-2xl object-cover w-96 h-44" src={image} alt="project-logo">
+    </div>
+    <div class="space-y-2">
+        <h3 class="text-purple-700 font-bold text-2xl">{name}</h3>
+        <p>{description}</p>
+        <div class="inline-flex p-2 rounded-lg items-center space-x-1 bg-dark-gray-400 ">
+            <Github width={24} height={24}/>
+            <a class="text-sm font-bold" href={repository} target="_blank">Github</a>
+        </div>
+    </div>
+    <div>
+        {languages.map(language => <language.logo />)}
+    </div>
+</div>
