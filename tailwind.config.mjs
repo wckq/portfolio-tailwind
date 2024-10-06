@@ -5,7 +5,7 @@ export default {
 		colors: {
 			"white": {
 				DEFAULT: "#F6F6F6",
-				700: "#e1e1e1"
+				700: "#c1c1c1"
 			},
 			"purple": {
 				400: "#968DFF",
