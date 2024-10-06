@@ -1,6 +1,7 @@
 ---
 import Github from "../icons/Github.astro"
 import type { Projects } from "@/types/projects"
+import TechnologyContainer from "./TechnologyContainer.astro"
 import Tooltip from "../text/Tooltip.astro"
 
 interface Props extends Projects {}
@@ -18,7 +19,7 @@ const { name, description, image, repository, technologies }: Projects = Astro.p
         <a class="inline-flex p-2 rounded-lg items-center space-x-3 bg-dark-gray-400 hover:bg-dark-gray-800 hover:text-white-700 text-sm font-bold" href={repository} target="_blank"> <Github width={24} height={24}/> Github</a>
     </div>
     <div class="w-56 h-1 my-6 lg:my-0 lg:h-48 lg:w-1 bg-white-700"></div>
-    <div class="self-start lg:mt-3 space-y-2">
+    <div class="self-start lg:mt-3 space-y-2 lg:pr-36">
         <h4 class="text-purple-700 font-bold text-3xl">Technologies</h3>
         <div class="grid grid-cols-5 gap-2 items-center">
             {technologies.map(technologies => (
