@@ -1,0 +1,29 @@
+---
+import Github from "../icons/Github.astro"
+import type { Projects } from "@/types/projects"
+import TechnologyContainer from "./TechnologyContainer.astro"
+
+interface Props extends Projects {}
+
+const { name, description, image, repository, technologies, languages }: Projects = Astro.props
+---
+
+<div class="flex items-center bg-dark-gray-700 my-4 mx-32 p-6 rounded-2xl space-x-10">
+    <div>
+        <img class="rounded-2xl object-cover w-96 h-48 " src={image} alt="project-logo">
+    </div>
+    <div class="space-y-3">
+        <h3 class="text-purple-700 font-bold text-3xl">{name}</h3>
+        <p class="font-bold text-2xl max-w-lg mx-auto">{description}</p>
+        <div>
+            <a class="inline-flex p-2 rounded-lg items-center space-x-3 bg-dark-gray-400 hover:bg-dark-gray-800 hover:text-white-700 text-sm font-bold" href={repository} target="_blank"> <Github width={24} height={24}/> Github</a>
+        </div>
+    </div>
+    <div class="h-48 w-1 bg-white-700"></div>
+    <div class="self-start mt-3 space-y-2">
+        <h4 class="text-purple-700 font-bold text-3xl">Technologies</h3>
+        <div class="grid grid-cols-5 gap-2 items-center">
+            {languages.map(language => <language.logo width="2em" height="2em"/>)}
+        </div>
+    </div>
+</div>
