@@ -1,10 +1,11 @@
 ---
-import Github from "@/components/icons/Github.astro"
-import X from "@/components/icons/X.astro"
+import Github from "@/components/icons/social-media/Github.astro"
+import X from "@/components/icons/social-media/X.astro"
+import ArrowDown from "./icons/ArrowDown.astro"
 
 ---
 
-<div id="home" class="flex items-center justify-center min-h-screen">
+<div id="home" class="flex flex-col items-center justify-center min-h-screen">
     <div class="flex flex-col items-center">    
         <img 
             class="h-48 w-48 md:h-56 z-auto md:w-56 rounded-full shadow-lg transition-transform transform hover:scale-110 duration-300" 
@@ -31,3 +32,15 @@ import X from "@/components/icons/X.astro"
         </div>
     </div>
 </div>
+
+<script>
+    window.addEventListener("scroll", function() {
+        const scrollIndicator = document.getElementById("scrollIndicator");
+
+        if (window.scrollY === 0) {
+            scrollIndicator?.classList.remove("hidden");
+        } else {
+            scrollIndicator?.classList.add("hidden");
+        }
+    });
+</script>

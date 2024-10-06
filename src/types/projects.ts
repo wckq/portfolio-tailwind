@@ -1,17 +1,17 @@
-import AmazonAWS from "@/components/icons/AmazonAWS.astro";
-import AstroLogo from "@/components/icons/AstroLogo.astro";
-import CSS from "@/components/icons/CSS.astro";
-import Express from "@/components/icons/Express.astro";
-import HTML from "@/components/icons/HTML.astro";
-import Java from "@/components/icons/Java.astro";
-import JavaScript from "@/components/icons/JavaScript.astro";
-import MongoDB from "@/components/icons/MongoDB.astro";
-import NodeJS from "@/components/icons/NodeJS.astro";
-import PostgreSQL from "@/components/icons/PostgreSQL.astro";
-import React from "@/components/icons/React.astro";
-import Redis from "@/components/icons/Redis.astro";
-import SpringBoot from "@/components/icons/SpringBoot.astro";
-import Typescript from "@/components/icons/Typescript.astro";
+import AmazonAWS from "@/components/icons/technologies/AmazonAWS.astro";
+import AstroLogo from "@/components/icons/technologies/AstroLogo.astro";
+import CSS from "@/components/icons/technologies/CSS.astro";
+import Express from "@/components/icons/technologies/Express.astro";
+import HTML from "@/components/icons/technologies/HTML.astro";
+import Java from "@/components/icons/technologies/Java.astro";
+import JavaScript from "@/components/icons/technologies/JavaScript.astro";
+import MongoDB from "@/components/icons/technologies/MongoDB.astro";
+import NodeJS from "@/components/icons/technologies/NodeJS.astro";
+import PostgreSQL from "@/components/icons/technologies/PostgreSQL.astro";
+import React from "@/components/icons/technologies/React.astro";
+import Redis from "@/components/icons/technologies/Redis.astro";
+import SpringBoot from "@/components/icons/technologies/SpringBoot.astro";
+import Typescript from "@/components/icons/technologies/Typescript.astro";
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 

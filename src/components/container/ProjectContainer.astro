@@ -1,5 +1,5 @@
 ---
-import Github from "../icons/Github.astro"
+import Github from "../icons/social-media/Github.astro"
 import type { Projects } from "@/types/projects"
 import Tooltip from "../text/Tooltip.astro"
 
@@ -8,9 +8,9 @@ interface Props extends Projects {}
 const { name, description, image, repository, technologies }: Projects = Astro.props
 ---
 
-<div class="flex flex-col lg:flex-row items-center bg-dark-gray-700 my-4 mx-16 lg:mx-32 p-6 rounded-2xl lg:space-x-10">
+<div class="flex flex-col lg:flex-row items-center bg-dark-gray-700 my-4 mx-16 lg:mx-32 p-6 rounded-2xl lg:space-x-10 transition-transform transform hover:scale-105 duration-300">
     <div>
-        <img class="rounded-2xl object-cover w-72 h-36 lg:w-96 md:h-48 " src={image} alt="project-logo">
+        <img class="rounded-2xl object-cover w-72 h-36 lg:w-96 md:h-48 opacity-20" src={image} alt="project-logo">
     </div>
     <div class="space-y-3">
         <h3 class="text-purple-700 font-bold pt-3 lg:pt-0 text-3xl">{name}</h3>
