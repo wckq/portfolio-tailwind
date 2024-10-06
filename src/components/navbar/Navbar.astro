@@ -2,13 +2,46 @@
 import NavbarLink from "./NavbarLink.astro";
 ---
 
-<nav class="flex fixed top-0 left-0 right-0 justify-between items-center text-white text-lg  py-5 px-32">
-    <div>
-        <ul class="flex space-x-8">
+<nav class="flex fixed top-0 left-0 right-0 items-center bg-dark-gray-700 text-white text-lg py-4 px-6 md:px-32 z-50">
+    <div class="flex items-center w-full md:w-auto">
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M3 8h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2m18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2m0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <ul class="hidden md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+        <NavbarLink ariaLabel="Go to Home" href="#home">Home</NavbarLink>
+        <NavbarLink ariaLabel="Go to Projects" href="#projects">Projects</NavbarLink>
+        <NavbarLink ariaLabel="Go to Skills" href="#skills">Skills</NavbarLink>
+    </ul>
+
+    <div id="mobile-menu" class="absolute bg-dark-gray-700 w-full top-16 left-0 z-30 opacity-0 transition-opacity duration-300 pointer-events-none">
+        <ul class="flex flex-col justify-center items-center space-y-2">
             <NavbarLink ariaLabel="Go to Home" href="#home">Home</NavbarLink>
             <NavbarLink ariaLabel="Go to Projects" href="#projects">Projects</NavbarLink>
             <NavbarLink ariaLabel="Go to Skills" href="#skills">Skills</NavbarLink>
-            <NavbarLink ariaLabel="Go to Contact me" href="#">Contact Me</NavbarLink>
         </ul>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle?.addEventListener('click', () => {
+            const isHidden = mobileMenu?.classList.contains('opacity-0');
+            if (isHidden) {
+                mobileMenu?.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu?.classList.add('opacity-100');
+            } else {
+                mobileMenu?.classList.remove('opacity-100');
+                mobileMenu?.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+    });
+</script>

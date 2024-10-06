@@ -4,9 +4,9 @@ import SkillContainer from "./container/SkillContainer.astro";
 import Subtitle from "./text/Subtitle.astro";
 ---
 
-<div id="skills" class="mt-28">
+<div id="skills" class="flex flex-col items-center lg:items-stretch mt-28">
     <Subtitle>Skills</Subtitle>
-    <div class="flex items-center justify-between mx-32 mt-4">
+    <div class="flex flex-col md:space-y-0 lg:flex-row lg:items-center lg:justify-between mx-32 lg:mt-4">
         <SkillContainer title="Front-End" technologies={[TECHNOLOGIES.HTML, TECHNOLOGIES.CSS, TECHNOLOGIES.JAVASCRIPT, TECHNOLOGIES.ASTRO, TECHNOLOGIES.REACT]}/>
         <SkillContainer title="Back-End" technologies={[TECHNOLOGIES.JAVA, TECHNOLOGIES.TYPESCRIPT, TECHNOLOGIES.EXPRESS, TECHNOLOGIES.NODE_JS, TECHNOLOGIES.POSTGRESQL, TECHNOLOGIES.MONGO_DB, TECHNOLOGIES.REDIS]}/>
         <SkillContainer title="Current Learning" technologies={[TECHNOLOGIES.AMAZON_AWS, TECHNOLOGIES.SPRING_BOOT]}/>
