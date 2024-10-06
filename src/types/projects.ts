@@ -89,5 +89,4 @@ export interface Projects {
     image: string;
     repository: string;
     technologies: Array<Raw>; 
-    languages: Array<Raw>; 
 }
